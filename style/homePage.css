@@ -1,0 +1,454 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+.titleDiv{
+    width: 80%;
+    height: 7vh;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleDiv{
+    text-align: center;
+    padding: 0 10px;    
+    justify-content: center;
+    h3{
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: 300;
+        font-size: clamp(2rem, 2vw, 1.5rem);
+        color: #525252;
+    }
+}
+
+.container .lastUpdate{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    color: #525252;
+}
+
+@media screen and (max-width: 650px) {
+    .container .titleDiv{
+        height: 6vh;
+
+        h3{
+            font-size: 1.5rem;
+        }
+    }
+    .container .lastUpdate{
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container .titleDiv{
+        height: 6vh;
+
+        h3{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.overviewDiv{
+    width: 100%;
+    height: 70vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    padding: 15px 0;
+}
+
+.overviewDiv .innerOverview1, .innerOverview2{
+    height: 100%;
+    width: 39.5%;
+    border-radius: 5px;
+    border: 1px solid #e8e8e8;
+    background-color: #ffffff;
+    position: relative;
+    transition: 200ms ease-in-out;
+}
+
+.overviewDiv .innerOverview1{
+    box-shadow: 1px 1px 1px 1px #e8e8e8;
+}
+
+.innerOverview1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .OverviewText{
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-size: 2.5rem;
+        color: #525252;
+    }
+
+    .numAni{
+        font-family: "Poppins", sans-serif;
+        font-size: 3rem;
+        font-weight: 800;
+
+    }
+}
+
+@media screen and (max-width: 650px){
+    .innerOverview1 .OverviewText{
+        font-size: 1.6rem;
+    }
+
+    .innerOverview1 .numAni{
+        font-size: 2rem;
+    }
+}
+
+.innerOverview2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+
+    a{
+        height: 24%;
+        /* background-color: #6ab04c; */
+        border-radius: 3px;
+        transition: 200ms ease-in-out;
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-size: 3rem;
+        padding-left: 10px;
+        text-decoration: none;
+        /* color: #badc58; */
+        position: relative;
+
+        svg{
+            transition: 200ms ease-in-out;
+            fill: #cccccc;
+            scale: 2;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            height: 23px;
+            width: 23px;
+        }
+    }
+}
+
+.innerOverview2{
+    a:nth-child(1){
+        background-color: #130f40;
+        color: #585ba5;
+
+        svg{
+            fill: #585ba5;
+        }
+    }
+
+    a:nth-child(2){
+        background-color: #f04441;
+        color: #fc9796;
+
+        svg{
+            fill: #fc9796;
+        }
+    }
+
+    a:nth-child(3){
+        background-color: #56a037;
+        color: #badc58;
+
+        svg{
+            fill: #badc58;
+        }
+    }
+
+    a:nth-child(4){
+        background-color: #0a3d62;
+        color: #82ccdd;
+
+        svg{
+            fill: #82ccdd;
+        }
+    }
+}
+
+.innerOverview2:hover > :not(:hover){
+    opacity: 0.7;
+}
+
+
+
+@media screen and (max-width: 1024px){
+    .overviewDiv{
+        flex-direction: column;
+        align-items: center;
+        height: 90vh;
+    }
+
+    .overviewDiv .innerOverview1 {
+        width: 80%;
+        height: 50%;
+        margin-bottom: 10px
+    }
+    .innerOverview2{
+        width: 80%;
+        height: 50%;
+        margin-bottom: 10px;
+    }
+    .innerOverview2{
+        a{
+            font-size: 2.5rem;
+            padding-left: 8px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1024px) and (max-height: 600px){
+    .overviewDiv{
+        flex-direction: row;
+        height: 70vh;
+    }
+
+    .overviewDiv .innerOverview1, .innerOverview2{
+        height: 99%;
+        width: 39.5%;
+    }
+
+    .innerOverview1 .OverviewText{
+        font-size: 2rem;
+    }
+
+    .innerOverview1 .numAni{
+        font-size: 2rem;
+    }
+
+    .innerOverview2{
+        a{
+            font-size: 1.6rem;
+            padding-left: 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px){
+    .overviewDiv .innerOverview1, .innerOverview2{
+        width: 80%;
+    }
+    .overviewDiv .innerOverview1{
+        height: 40%;
+    }
+    .innerOverview2{
+        height: 40%;
+        a{
+            font-size: 1.5rem;
+            padding-left: 8px;
+
+            svg{
+                scale: 1.3;
+                right: 8px;
+                bottom: 8px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px){
+    .innerOverview2{
+        a{
+            font-size: 1.3rem;
+
+            svg{
+                scale: 1;
+                right: 4px;
+                bottom: 4px;
+            }
+        }
+    }
+}
+
+.adminDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adminOptions{
+    width: 80%;
+    height: 30vh;
+    margin-top: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.adminOptions a{
+    height: 100%;
+    min-width: 24%;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    position: relative;
+    font-size: 2.7rem;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+    padding-left: 8px;
+    text-decoration: none;
+    transition: 200ms ease-in-out;
+
+    svg{
+        transition: 200ms ease-in-out;
+        scale: 2;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        height: 23px;
+        width: 23px;
+    }
+}
+
+.adminOptions{
+    a:nth-child(1){
+        background-color: #e58e26;
+        color: #fad390;
+
+        svg{
+            fill: #fad390;
+        }
+    }
+
+    a:nth-child(2){
+        background-color: #b71540;
+        color: #ff7da0;
+
+        svg{
+            fill: #ff7da0;
+        }
+    }
+
+    a:nth-child(3){
+        background-color: #0c2461;
+        color: #6a89cc;
+
+        svg{
+            fill: #6a89cc;
+        }
+    }
+
+    a:nth-child(4){
+        background-color: #0a3d62;
+        color: #82ccdd;
+
+        svg{
+            fill: #82ccdd;
+        }
+    }
+}
+
+.adminOptions:hover > :not(:hover){
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1024px){
+    .adminOptions a{
+        height: 50%;
+        min-width: 49%;
+        border: 1px solid #e8e8e8;
+        border-radius: 4px;
+        margin-bottom: 1.5%;
+        font-size: 2rem;
+
+        svg{
+            scale: 1.5;
+            right: 8px;
+            bottom: 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 600px){
+    .adminOptions a{
+        font-size: 1.5rem;
+        padding-left: 5px;
+
+        svg{
+            scale: 1.3;
+            right: 6px;
+            bottom: 6px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px){
+    .adminOptions a{
+        font-size: 1.5rem;
+        padding-left: 5px;
+
+        svg{
+            scale: 1.3;
+            right: 6px;
+            bottom: 6px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px){
+    .adminOptions a{
+        font-size: 1.2rem;
+        padding-left: 5px;
+
+        svg{
+            scale: 1;
+            right: 4px;
+            bottom: 4px;
+        }
+    }
+}
+
+.contactDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0 20px 0;
+
+    p{
+        font-family: poppins, sans-serif;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .contactDiv{
+        margin-top: 20px;
+        p{
+            font-size: 0.6rem;
+        }
+    }
+}
