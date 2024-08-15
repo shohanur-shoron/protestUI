@@ -116,7 +116,7 @@
 
 @media screen and (max-width: 650px){
     .innerOverview1 .OverviewText{
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
 
     .innerOverview1 .numAni{
@@ -258,7 +258,7 @@
         width: 80%;
     }
     .overviewDiv .innerOverview1{
-        height: 40%;
+        height: 43%;
     }
     .innerOverview2{
         height: 40%;
